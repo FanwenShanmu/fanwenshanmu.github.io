@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Pham Van Sam </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="285edf0f-f005-4665-916e-b6274896031f" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/solid_yellow.png" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🐢</span></div><h1 class="page-title">Pham Van Sam </h1><p class="page-description"></p></header><div class="page-body"><div id="736a5632-8ca1-42be-a1c4-da9a1095097d" class="column-list"><div id="8221ec1e-fc85-42bd-ac5d-1c5dbfff405d" style="width:56.25%" class="column"><p id="2a8c2643-811b-42bb-82a6-85c23265ad6c" class="">Phạm Văn Sâm hiện đang là học sinh lớp 12 chuyên Tin, trường THPT Chuyên Biên Hòa - Hà Nam.</p><p id="b4514e0b-b5bd-4f99-a010-5e638a81fdd2" class="">
+</p></div><div id="7b23bf02-6aa1-462f-92cf-a8b34cac9522" style="width:43.75%" class="column"><figure id="cfe76e55-d98e-4171-8269-e25bf62f94b2" class="image" style="text-align:center"><a href="Pham%20Van%20Sam%20285edf0ff0054665916eb6274896031f/download_(11).jpg"><img style="width:736px" src="Pham%20Van%20Sam%20285edf0ff0054665916eb6274896031f/download_(11).jpg"/></a></figure></div></div><h2 id="e1fad788-1687-426e-8b96-5d41f40b9294" class="">🌈 About Me</h2><hr id="e499e306-caa2-443c-a206-47d5c3950c45"/><p id="11be9293-5984-4001-bb3e-8668d92cb128" class="">Một từ thôi : <del><strong>NGU</strong></del></p><p id="95bcad9d-4177-4eb1-94a0-1685dcfcc231" class="">
+</p><h2 id="5be9c969-9117-405f-86f3-ecc0e59ded58" class="">📋 Experience</h2><hr id="b21c3647-6728-439a-bc25-3bd8912ff51a"/><div id="266cb482-0af0-460a-8590-13f0be063f3d" class="column-list"><div id="2c13d7f8-736a-49ca-b56c-b85aff2a6afb" style="width:62.5%" class="column"><p id="414401c1-452f-489f-821a-01335eaac34c" class=""><strong>Trở thành CBHer</strong></p></div><div id="eec0bbf3-07a6-4e7d-9784-571d96b52c80" style="width:37.5%" class="column"><p id="6282a26d-fcba-42ca-82bb-c2a79d1a918c" class="">Jun 15, 2021</p></div></div><p id="95512078-4d49-423f-982f-39577a8de8a1" class="">Sau nhiều tháng ôn thi như một thằng điên cuối cùng cũng đỗ được, phê đê mê luôn. Tiếc là thiếu <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.25</mn></mrow><annotation encoding="application/x-tex">0.25</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.25</span></span></span></span></span><span>﻿</span></span><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>đ</mtext></mrow><annotation encoding="application/x-tex">\text{đ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord latin_fallback">đ</span></span></span></span></span></span><span>﻿</span></span> để trở thành <del>thủ khoa chuyên Tin</del>.  </p><div id="2bac06ad-ed72-42ce-ba07-65717fa181ac" class="column-list"><div id="486672e7-a240-4bbd-b76b-dbb41a1b2dc7" style="width:62.5%" class="column"><p id="ac509446-39b0-4872-8229-8a40dbab6593" class="">Dù thi xong rồi nhưng vẫn lên lớp học, động viên các bạn trong lớp cố gắng thi đỗ cấp 3 đồng thời lưu giữ lại những kỉ niệm cuối cùng được học cùng nhau.</p><figure id="8bfd5c6a-1948-430b-8b21-357210e9de24" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>perfect</mtext></mrow><annotation encoding="application/x-tex">\text{perfect}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">perfect</span></span></span></span></span></span></div></figure><p id="93a84d51-9238-48c3-8b4e-4eaffe8d04bf" class="">
+</p></div><div id="637fa687-403d-4113-95ca-0eebabe4b909" style="width:37.49999999999999%" class="column"><figure id="8fd3fff9-a793-41a2-9710-06dc7b32fa05" class="image" style="text-align:right"><a href="https://media1.giphy.com/media/G7lfJRrvdhtxK8OVGy/giphy.gif?cid=7941fdc6occcfvrdr6rr3610ppi0819236folbvdky1in92c&amp;ep=v1_gifs_search&amp;rid=giphy.gif&amp;ct=g"><img style="width:192px" src="https://media1.giphy.com/media/G7lfJRrvdhtxK8OVGy/giphy.gif?cid=7941fdc6occcfvrdr6rr3610ppi0819236folbvdky1in92c&amp;ep=v1_gifs_search&amp;rid=giphy.gif&amp;ct=g"/></a></figure></div></div><div id="fddf6fe3-2e55-445c-9ce8-ea1ee1c74f6b" class="column-list"><div id="368fee91-42e5-44ee-a206-b71e316353ee" style="width:62.5%" class="column"><p id="7ca998d3-0aa5-4a69-a961-f1c298f43753" class=""><strong>Lớp 10 - hối hận khi học chuyên tin</strong></p></div><div id="c5634bca-f54c-4361-96ba-67263ad27962" style="width:37.5%" class="column"><p id="de47edfa-a284-40b9-ad72-07191ba5ada4" class="">July 2021 - May 2022</p></div></div><p id="a453620f-ab23-4aba-a1a8-11670bdd8357" class="">Với những tiết học tin đầu tiên, mình không hiểu một tí gì cả (còn phải mất gần 1 tuần mới cài được Codeblock). Học tin chán hơn học toán nhiều. Tự nhiên phải học một mớ kiến thức mà mình cảm thấy xàm loz nhất. Hết học kì I lớp 10, được cái là lớp cũng chỉ có vài đứa có “đam mê” học tin (nhưng thực ra là lùa gà thì đúng hơn), hên xui là trong số những đứa được học bổng có mình, đứng áp chót luôn. Giờ cũng không nhớ hồi đó được bao nhiêu tiền nhưng chắc chắn là được ít lắm. Đó cũng là lần duy nhất mà lớp chia học bổng cho mỗi đứa <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">100\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">100%</span></span></span></span></span><span>﻿</span></span>, bởi từ học kì sau, có những thằng chỉ được <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mi mathvariant="normal">%</mi><mo separator="true">,</mo><mn>25</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">50\%, 25\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9444em;vertical-align:-0.1944em;"></span><span class="mord">50%</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">25%</span></span></span></span></span><span>﻿</span></span> tiền học bổng thôi. Mổ xẻ kinh quá. Sang học kì II, thấy bú được tiền học bổng ngon quá, bắt đầu dành tí thời gian cho học tin nhưng cũng chỉ mục tiêu là được học bổng thôi, không cần đứng top của lớp. Hồi đó cày toán, lí, hóa như điên luôn. 3 môn này điểm tổng kết luôn thuộc dạng top đầu của lớp (không nhất thì nhì). Học như điên nhưng chơi cũng rất nhiều. Tối toàn đi đá bóng với mấy thằng bạn. Đỉnh điểm là cuối tháng 4 - đầu tháng 5, tối nào cũng đi đá bóng. Thường thì toàn đá từ 8h - 10h. Có hôm đá đến 12h. Nhiều hôm đá kiệt sức phải cố lết xác đến trường đi học. Vậy mà thi học kì vẫn được 10đ toán. Ngạo nghễ luôn. Xong đến lúc tổng kết học kì II, bằng một cách thần kì nào đó, dành có tí thời gian học tin mà điểm tổng kết lên mọe top của lớp, đương nhiên là được học bổng rồi. Lúc đó, cô có kêu gọi mấy thằng top đầu đi học ôn thi duyên hải và ôn vào đtqg. Toàn những con gà bị lùa vào chuồng. Tuy nhiên mình không học.  Cảm thấy học tốn tiền và chằng được cái gì hay ho cả. Thay vào đó, mình có dự định cả hè ngồi nghiên cứu toán học. Học tin thế là đủ rồi. Giờ đi học toán. Các cô thấy mình không có ý định ôn thi, các cô vào sấy ngay. Mời chào các kiểu. Xong bằng cái đầu lạnh, mình đã từ chối rất nhiều. Nhắn nhiều quá chặn luôn. Vậy là hết năm lớp 10. </p><div id="d4227fb0-6bdc-4a3e-8cd9-91aae4635679" class="column-list"><div id="1f6feb74-131f-41d6-8aba-59f003211e66" style="width:62.5%" class="column"><p id="1cf2ed94-5576-4446-bea5-ed0042f2b7c6" class=""><strong>Quay xe học tin chỉ vì </strong><del><strong>tiền</strong></del></p></div><div id="36f385df-0245-4c71-9e8d-44ee26368c4b" style="width:37.5%" class="column"><p id="a3456056-54ed-4c10-9527-1b3214797374" class="">June 2022</p></div></div><p id="4c1fe777-1ed6-46eb-8cc8-574622ccb7c6" class="">As the Head of Marketing for the Design Club at USF, I was responsible for creating awareness about our events and initiatives. I managed our social media presence, designed promotional materials, and coordinated with other student organizations for collaborative events.</p><p id="1a62c145-b122-4de0-a265-2cd0953cc672" class="">
+</p><div id="60065355-ba29-4e1a-bd40-46856648ee73" class="column-list"><div id="6ee35fc5-f27d-4dad-97c6-f06d14d9b495" style="width:50%" class="column"><h2 id="d32b21fd-aa31-45cd-8d5a-13ee8a146256" class="">✨ Relevant Courses</h2><hr id="acb56f52-6a14-4f54-a40b-3fc1ab85e4d9"/><ul id="5c47560a-04d0-4562-90f6-521c9cb980a8" class="bulleted-list"><li style="list-style-type:disc">Media and Society</li></ul><ul id="f9871082-589e-40d2-9f8f-e54ba781b014" class="bulleted-list"><li style="list-style-type:disc">Introduction to Digital Design</li></ul><ul id="aae6fe93-84ac-451e-8ca3-d7f35aaab13f" class="bulleted-list"><li style="list-style-type:disc">Advanced Digital Design</li></ul><ul id="ed79700c-0da5-42e7-af9b-837336f7749d" class="bulleted-list"><li style="list-style-type:disc">Visual Communication</li></ul><ul id="f9d7fbd9-b750-45bf-8d92-c785ddece58f" class="bulleted-list"><li style="list-style-type:disc">User Experience Design</li></ul></div><div id="59bd19c2-bbfd-45c9-a3d8-733b39caa917" style="width:50%" class="column"><h2 id="276ec5da-43d2-4e3a-b27f-139cfee06bca" class="">⭐ Skills</h2><hr id="df6d3a50-8356-4eb1-b14d-b3ecc9b280a6"/><ul id="1f548b54-c48c-4564-94cb-b5b7cf51cbd7" class="bulleted-list"><li style="list-style-type:disc">Proficient in Adobe Creative Suite (Photoshop, Illustrator, InDesign)</li></ul><ul id="769974da-3cb8-4e21-9d5c-49c9b3578ae5" class="bulleted-list"><li style="list-style-type:disc">Strong understanding of social media platforms and analytics</li></ul><ul id="f0c131a1-0b7c-42c6-9b7e-85dbbb64c761" class="bulleted-list"><li style="list-style-type:disc">Experience with video editing software (Premiere Pro, Final Cut Pro)</li></ul></div></div><p id="13e00fdc-bda9-450f-9425-2914b8c200ab" class="">
+</p><h2 id="f63bb17d-a1fe-4c8f-9c59-c72043709fcb" class="">📬 Contact</h2><hr id="30e6a5ba-8ece-4876-95d5-21b4859418f1"/><p id="954f8f3c-3deb-4111-858d-2cec56f6167e" class="">Reach me at <a href="mailto:ada.lee@example.com">ada.lee@example.com</a> or on LinkedIn at <a href="http://www.linkedin.com/in/ada-lee">www.linkedin.com/in/ada-lee</a>. Let&#x27;s connect and learn together!</p><p id="4771f3b4-0a43-44d4-8c97-c0487a88b6b0" class="">
+</p><p id="f41c1920-e9d8-4a27-9fd4-842db4efd64f" class="">Thanks for stopping by my corner of the internet! 💫</p><p id="7e157489-d4af-4b4e-9d4c-860b1ef7cb43" class="">
+</p><p id="7257e2fd-4222-42dd-9dc8-b2aa4667bebb" class="">
+</p><p id="ca699c3a-e6b0-4e35-a711-556654141a0e" class="block-color-gray">If you want to turn this page into a shareable public website, you’ll want to make it public:</p><ol type="1" id="a89224a1-10f0-4f07-8e58-3bd3636f4594" class="block-color-gray numbered-list" start="1"><li><mark class="highlight-gray">Click </mark><mark class="highlight-gray"><code>Share</code></mark><mark class="highlight-gray"> on the page and go to the </mark><mark class="highlight-gray"><code>Publish</code></mark><mark class="highlight-gray"> menu.</mark></li></ol><ol type="1" id="e5bedf8a-db9a-46a1-b4ed-656fc63239b8" class="block-color-gray numbered-list" start="2"><li><mark class="highlight-gray">Click </mark><mark class="highlight-gray"><code>Publish to web</code></mark><mark class="highlight-gray">.</mark></li></ol><p id="753b1063-4bc0-4ca5-9b1f-900b9f369407" class="">
+</p><div id="95279c1a-32b7-42f9-af2b-105fd51ae975" class="column-list"><div id="e4139c9b-dead-43e1-a026-918b6b190cbc" style="width:62.5%" class="column"><p id="de52b079-28c8-4db8-bf2c-4b8d60838750" class=""><strong>Product Design Intern - Notion</strong></p></div><div id="d49dd9a7-70e2-494e-a0ed-a82185e92793" style="width:37.5%" class="column"><p id="b411cc60-e955-4999-8198-ae6814b4eb9d" class="">May 6, 2024 - Aug 30, 2024</p></div></div><p id="4d4bdac7-1b62-4cda-9b9c-00c29ca593e9" class="">At Notion, I was responsible for creating and iterating on digital product designs. I worked closely with the design and development teams to create user-centered designs and contributed to the user research process.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
